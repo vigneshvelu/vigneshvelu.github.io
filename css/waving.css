@@ -1,0 +1,87 @@
+.illustration{
+	grid-row: 2/3;
+	padding: 20px;
+	max-width:400px;
+	margin: 0 auto;
+}
+
+.illustration svg{
+	max-height: 300px;
+}
+
+@media (min-width:50em) {
+	font-size:16px;
+	.mainScreen{
+		height: 100vh;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: 60vh 40vh;
+		align-items: center;
+	}
+
+	.intro{
+		text-align: left;
+		grid-row: 1/2;
+		grid-column: 1/2;
+	}
+	.intro h1{
+		font-size:4em;
+	}
+	.intro h2{
+		font-size: 2em;
+	}
+
+	.links{
+		grid-column:1/2;
+		grid-row:2/3;
+	}
+
+	.links a{
+		font-size: 2.5em;
+		border-bottom:8px solid #142137;
+	}
+
+	.links a:before{
+		height: 8px;
+		bottom:-8px;
+	}
+	.illustration{
+		grid-row: 1/3;
+		grid-column:2/3;
+		max-width:none;
+	}
+	.illustration svg{
+		max-height:800px;
+	}
+}
+
+/*illustration Css ANimations*/
+
+.hand{
+	transform-origin: bottom left;
+	animation: waving 0.5s linear infinite ;
+}
+
+
+@keyframes waving {
+	0% { transform: rotate(0deg); }
+	50%	{ 
+		transform: rotate(1deg); 
+		/*transform: translate(-2px);*/
+	}
+	100% { transform: rotate(0deg); }
+}
+
+.head{
+	transform-origin: bottom;
+	animation: headMoving 0.5s linear infinite;
+}
+
+@keyframes headMoving{
+	25%{
+		transform: translate(1px);
+	}
+	75%{
+		transform: translate(-1px);
+	}
+}
+
