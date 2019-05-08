@@ -412,7 +412,8 @@ h2 {
 .homepage {
   display: -ms-grid;
   display: grid;
-  min-height: 100vh;
+  height:100vh;
+  /*min-height: 100vh;*/
   grid-auto-columns: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
